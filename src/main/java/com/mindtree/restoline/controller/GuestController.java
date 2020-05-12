@@ -141,7 +141,7 @@ public class GuestController {
 	 */
 
 	@RequestMapping("/aa")
-	private String pub(Model model) {
+	public String pub(Model model) {
 		Guest guest = this.guestService.findById(loginId);// Find the Guest By guestId;
 		model.addAttribute("guest", guest);// Add guest to the model
 		return "LoginPage";// Return to Login Page
