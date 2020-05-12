@@ -12,7 +12,7 @@ public class LoginDto {
 	 */
 	public LoginDto() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 	/*
 	 * Geters and seters
