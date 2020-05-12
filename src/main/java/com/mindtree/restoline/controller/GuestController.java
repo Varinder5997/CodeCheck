@@ -70,7 +70,7 @@ public class GuestController {
 
 	@RequestMapping("/save-user")
 	public String addNewUser(@ModelAttribute Guest guest) {
-		Guest add = this.guestService.addGuest(guest); // Add Guest into Database
+		this.guestService.addGuest(guest); // Add Guest into Database
 		return "SuccesfullyAdded"; // Return to succesfullyAdded Page
 
 	}
@@ -112,7 +112,7 @@ public class GuestController {
 	String hId = null;
 
 	@RequestMapping("/bookSeat")
-	public String BookSeat(Model model) {
+	public String bookSeat(Model model) {
 		List<Restaurant> allRestaurants = this.restaurantService.allRestaurants(); // Get list of all the restaurants
 																					// present in the database
 		model.addAttribute("allRestaurants", allRestaurants); // Add allRestaurant Object to model
